@@ -6,14 +6,12 @@
   <title>개인정보처리방침 – 쌓임</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: #f8fafc;
       color: #1e293b;
       line-height: 1.8;
     }
-
     header {
       background: #3acf8c;
       padding: 40px 24px 32px;
@@ -30,13 +28,11 @@
       font-size: 14px;
       color: rgba(255,255,255,0.85);
     }
-
     main {
       max-width: 720px;
       margin: 0 auto;
       padding: 40px 24px 80px;
     }
-
     .intro {
       background: #fff;
       border-radius: 16px;
@@ -46,7 +42,6 @@
       font-size: 15px;
       color: #475569;
     }
-
     section {
       background: #fff;
       border-radius: 16px;
@@ -54,7 +49,6 @@
       margin-bottom: 16px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
-
     h2 {
       font-size: 16px;
       font-weight: 700;
@@ -77,10 +71,8 @@
       justify-content: center;
       flex-shrink: 0;
     }
-
     p { font-size: 14px; color: #475569; margin-bottom: 10px; }
     p:last-child { margin-bottom: 0; }
-
     table {
       width: 100%;
       border-collapse: collapse;
@@ -102,7 +94,6 @@
       vertical-align: top;
     }
     tr:last-child td { border-bottom: none; }
-
     ul {
       padding-left: 18px;
       font-size: 14px;
@@ -110,7 +101,6 @@
     }
     li { margin-bottom: 6px; }
     li:last-child { margin-bottom: 0; }
-
     .highlight {
       background: #f0fdf4;
       border: 1px solid #bbf7d0;
@@ -120,7 +110,6 @@
       color: #166534;
       margin-top: 12px;
     }
-
     .updated {
       text-align: center;
       font-size: 13px;
@@ -130,16 +119,14 @@
   </style>
 </head>
 <body>
-
 <header>
   <h1>개인정보처리방침</h1>
-  <p>쌓임 (SSAIM) · 시행일: 2026년 3월 27일</p>
+  <p>쌓임 (SSAIM) · 시행일: 2026년 4월 2일</p>
 </header>
 
 <main>
-
   <div class="intro">
-    쌓임(이하 "앱")은 이용자의 개인정보를 소중히 여깁니다. 본 방침은 앱이 수집하는 정보, 사용 목적, 보관 기간 및 이용자 권리에 대해 안내합니다.
+    쌓임(이하 "앱")은 이용자의 개인정보를 소중히 여깁니다. 본 방침은 앱이 수집하는 정보, 사용 목적, 보관 기간 및 이용자 권리에 대해 안내합니다. 앱은 카메라 및 저장소 권한을 포함한 일부 민감 권한을 사용하며, 해당 권한의 사용 목적을 본 방침 제5조에 상세히 기재합니다.
   </div>
 
   <!-- 1 -->
@@ -169,6 +156,11 @@
           <td>영양제 복용 기록, 복용 알림 설정, 앱 이용 기록</td>
           <td>서비스 이용 중</td>
         </tr>
+        <tr>
+          <td>카메라·사진</td>
+          <td>영양성분표 촬영 이미지 (분석 후 앱 내 저장하지 않음)</td>
+          <td>영양성분표 스캔 시</td>
+        </tr>
       </tbody>
     </table>
     <div class="highlight">
@@ -183,6 +175,7 @@
       <li>회원 가입 및 본인 확인</li>
       <li>영양제 복용 기록 관리 및 축적 지수 계산</li>
       <li>개인 건강 정보 기반 맞춤형 복용 분석 제공</li>
+      <li>영양성분표 사진 분석을 통한 영양제 성분 자동 인식 및 권장 복용량 계산</li>
       <li>복용 알림 발송</li>
       <li>서비스 오류 확인 및 개선</li>
     </ul>
@@ -205,8 +198,8 @@
 
   <!-- 4 -->
   <section>
-    <h2><span class="num">4</span>개인정보의 제3자 제공</h2>
-    <p>앱은 원칙적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 단, 데이터 저장을 위해 아래 업체를 이용합니다.</p>
+    <h2><span class="num">4</span>개인정보의 제3자 제공 및 처리 위탁</h2>
+    <p>앱은 원칙적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 단, 서비스 제공을 위해 아래 업체에 처리를 위탁합니다.</p>
     <table>
       <thead>
         <tr><th>수탁 업체</th><th>처리 위탁 업무</th><th>보유 기간</th></tr>
@@ -217,13 +210,56 @@
           <td>회원 인증 및 데이터베이스 저장</td>
           <td>회원 탈퇴 시까지</td>
         </tr>
+        <tr>
+          <td>OpenAI, L.L.C.<br><span style="font-size:12px;color:#94a3b8;">(Cloudflare Workers 경유)</span></td>
+          <td>영양성분표 이미지 분석 (GPT-4o Vision API)<br>
+            <span style="font-size:12px;color:#94a3b8;">※ 이미지는 분석 즉시 파기되며 OpenAI에 저장되지 않습니다.</span>
+          </td>
+          <td>분석 완료 즉시 파기</td>
+        </tr>
       </tbody>
     </table>
   </section>
 
   <!-- 5 -->
   <section>
-    <h2><span class="num">5</span>개인정보의 안전성 확보 조치</h2>
+    <h2><span class="num">5</span>앱 권한 사용 목적</h2>
+    <p>앱은 다음 권한을 사용하며, 각 권한은 명시된 목적 외에 사용되지 않습니다.</p>
+    <table>
+      <thead>
+        <tr><th>권한</th><th>사용 목적</th><th>수집·저장 여부</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>카메라</strong><br><span style="font-size:12px;color:#94a3b8;">android.permission.CAMERA</span></td>
+          <td>영양성분표 사진 촬영 후 GPT-4o Vision API를 통해 성분을 자동 분석합니다. 촬영된 이미지는 분석 목적으로만 전송되며, 앱 내에 저장되지 않습니다.</td>
+          <td>저장 안 함<br>(분석 후 즉시 파기)</td>
+        </tr>
+        <tr>
+          <td><strong>사진·미디어 접근</strong><br><span style="font-size:12px;color:#94a3b8;">READ_EXTERNAL_STORAGE</span></td>
+          <td>갤러리에서 영양성분표 사진을 선택하여 성분을 분석합니다. 선택한 이미지는 분석 목적으로만 사용됩니다.</td>
+          <td>저장 안 함<br>(분석 후 즉시 파기)</td>
+        </tr>
+        <tr>
+          <td><strong>알림</strong><br><span style="font-size:12px;color:#94a3b8;">POST_NOTIFICATIONS<br>SCHEDULE_EXACT_ALARM<br>RECEIVE_BOOT_COMPLETED<br>VIBRATE</span></td>
+          <td>사용자가 설정한 시간에 영양제 복용 알림을 발송합니다. 기기 재시작 후에도 알림이 유지됩니다.</td>
+          <td>알림 시간 설정값만 저장</td>
+        </tr>
+        <tr>
+          <td><strong>광고 ID</strong><br><span style="font-size:12px;color:#94a3b8;">com.google.android.gms<br>.permission.AD_ID</span></td>
+          <td>Google Play 서비스 정책에 따라 선언된 권한으로, 현재 앱 내 광고에는 사용되지 않습니다.</td>
+          <td>수집 안 함</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight">
+      카메라 및 사진 권한은 영양성분표 분석 기능 사용 시에만 요청되며, 이용자가 직접 촬영·선택할 때만 활성화됩니다. 권한을 거부하더라도 영양제 수동 등록 등 다른 기능은 정상 이용 가능합니다.
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <h2><span class="num">6</span>개인정보의 안전성 확보 조치</h2>
     <ul>
       <li>비밀번호는 암호화하여 저장합니다.</li>
       <li>데이터 전송 시 HTTPS(SSL/TLS) 암호화를 적용합니다.</li>
@@ -232,9 +268,9 @@
     </ul>
   </section>
 
-  <!-- 6 -->
+  <!-- 7 -->
   <section>
-    <h2><span class="num">6</span>이용자의 권리</h2>
+    <h2><span class="num">7</span>이용자의 권리</h2>
     <p>이용자는 언제든지 아래 권리를 행사할 수 있습니다.</p>
     <ul>
       <li>본인 개인정보 열람 요청</li>
@@ -245,15 +281,15 @@
     <p style="margin-top:12px;">앱 설정 → 프로필에서 직접 회원 탈퇴 및 데이터 삭제가 가능합니다. 기타 문의는 아래 연락처로 요청하세요.</p>
   </section>
 
-  <!-- 7 -->
+  <!-- 8 -->
   <section>
-    <h2><span class="num">7</span>만 14세 미만 아동의 개인정보</h2>
+    <h2><span class="num">8</span>만 14세 미만 아동의 개인정보</h2>
     <p>앱은 만 14세 미만 아동의 개인정보를 수집하지 않습니다. 만 14세 미만 이용자는 서비스 이용이 제한됩니다.</p>
   </section>
 
-  <!-- 8 -->
+  <!-- 9 -->
   <section>
-    <h2><span class="num">8</span>개인정보 보호책임자 및 문의</h2>
+    <h2><span class="num">9</span>개인정보 보호책임자 및 문의</h2>
     <table>
       <tbody>
         <tr><td style="width:120px;font-weight:600;">서비스명</td><td>쌓임 (SSAIM)</td></tr>
@@ -267,14 +303,13 @@
     </ul>
   </section>
 
-  <!-- 9 -->
+  <!-- 10 -->
   <section>
-    <h2><span class="num">9</span>방침 변경 안내</h2>
+    <h2><span class="num">10</span>방침 변경 안내</h2>
     <p>본 방침은 법령·서비스 변경에 따라 수정될 수 있으며, 변경 시 앱 내 공지 또는 이메일을 통해 사전 안내합니다.</p>
   </section>
 
-  <p class="updated">시행일: 2026년 3월 27일 · 최종 수정: 2026년 3월 27일</p>
-
+  <p class="updated">최초 시행일: 2026년 3월 27일 · 최종 수정: 2026년 4월 2일</p>
 </main>
 </body>
 </html>
